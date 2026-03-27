@@ -1,0 +1,27 @@
+{
+  "name": "sancikatech-linkedin-automation",
+  "version": "1.0.0",
+  "description": "AI-powered LinkedIn post automation for Sancikatech — generates cybersecurity-focused content and auto-posts to LinkedIn",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "generate": "node src/index.js generate",
+    "post": "node src/index.js post",
+    "auth": "node src/index.js auth",
+    "schedule": "node src/index.js schedule"
+  },
+  "keywords": ["linkedin", "automation", "cybersecurity", "ai", "sancikatech"],
+  "author": "Sancikatech",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.9",
+    "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3",
+    "open": "^10.1.0",
+    "puppeteer": "^24.2.1"
+  }
+}
