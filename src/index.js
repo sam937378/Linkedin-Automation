@@ -1,3 +1,21 @@
+const http = require('http');
+
+// Minimal health-check server to satisfy Render's port requirement
+const PORT = process.env.PORT || 10000;
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({
+    status: 'running',
+    service: 'LinkedIn Scheduler',
+    schedule: '0 9 * * 1-5',
+    uptime: process.uptime()
+  }));
+}).listen(PORT, () => {
+  console.log(`  🌐 Health server listening on port ${PORT}`);
+});
+
+
+
 #!/usr/bin/env node
 
 import { Command } from 'commander';
